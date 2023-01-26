@@ -31,8 +31,8 @@ export default function Balance() {
   if (isDisconnected) {
     return null
   } else if (balanceOf.isSuccess && balanceOf.data) {
-    return  balanceOf.data?.isZero() ? <a target={"_blank"} rel="noreferrer" href="https://faucet.celo.org">Top Up Account</a>  : <p> {formatEther(balanceOf.data)}</p>
+    return  balanceOf.data?.isZero() ? <a className="m-1 underline underline-offset-8 text-forest" target={"_blank"} rel="noreferrer" href="https://faucet.celo.org">Top Up Account</a>  : <p className="m-1">Balance {Number(formatEther(balanceOf.data)).toPrecision(4)} CELO</p>
   } else {
-    return <p>{balanceOf.status}</p>
+    return <p className="m-1">{balanceOf.status}</p>
   }
 }

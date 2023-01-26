@@ -5,9 +5,12 @@ import { useAccount } from "wagmi"
 export default function Account() {
   const { address, status} = useAccount()
 
-  if (status === "connected") {
-    return <span>{address}</span>
-  } else {
-    return <span>{status}</span>
-  }
+    return <section className="m-1">
+      {status === "connected" ?
+        <>
+          <label>Address</label> <code className="bg-white">{address}</code>
+        </>
+        : <span>{status}</span>}
+    </section>
+
 }

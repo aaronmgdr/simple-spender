@@ -27,12 +27,12 @@ export default function Transfer() {
 
 
   if (isLoading) {
-    return <p>Awaiting User Confirmation</p>
+    return <p  className='m-1 italic'>Awaiting User Confirmation</p>
   }
 
   if (isSuccess) {
-    return <p> {blockchain.isSuccess? "Confirmed": "Pending" } Transfer of {formatEther(amount)} to {recipientAddress} <a target={"_blank"} rel="noreferrer" href={`https://explorer.celo.org/alfajores/tx/${data?.hash}`}>View</a></p>
+    return <p className='m-1 py-2 semi-bold'> {blockchain.isSuccess? "Confirmed": "Pending" } <a className='m-1 underline underline-offset-8 text-forest' target={"_blank"} rel="noreferrer" href={`https://explorer.celo.org/alfajores/tx/${data?.hash}`}>Transfer of {formatEther(amount)}</a> to {recipientAddress}</p>
   }
 
-  return <button disabled={!write} onClick={() => write?.()}>Send {formatEther(amount)} CELO</button>
+  return <button className='m-1 py-1 px-4 b-1 bg-prosperity border border-sand rounded-3xl hover:bg-transparent' disabled={!write} onClick={() => write?.()}>Send {formatEther(amount)} CELO</button>
 }
