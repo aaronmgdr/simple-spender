@@ -22,7 +22,7 @@ import { Alfajores, Celo } from "@celo/rainbowkit-celo/chains";
 
 import Layout from "../components/Layout";
 import { useEffect } from "react"
-import useIsMounted from "@/hooks/use-is-mounted"
+import useIsMounted from "@/react-helpers/use-is-mounted"
 
 const { chains, provider } = configureChains(
   [Alfajores, Celo],

@@ -1,4 +1,4 @@
-import { REGISTRY_ABI } from "@/abi/Registry"
+import { REGISTRY_ABI } from "@/abi/CeloRegistry"
 import { useContractEvent, useContractRead } from "wagmi"
 
 

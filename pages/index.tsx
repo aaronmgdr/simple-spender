@@ -1,6 +1,6 @@
 import Account from "@/components/Account"
 import Balance from "@/components/Balance"
-import Transfer from "@/components/Transfer"
+import Transfer from "@/components/TransferButton"
 
 export default function Home() {
 
